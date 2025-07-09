@@ -14,7 +14,7 @@ header{
     justify-content: space-between;
 }
 
-.logo{
+.logo1{
     height: 60px;
 }
 
@@ -58,4 +58,11 @@ footer {
     background:#002a4b ;
     color:white ;
 
+}
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding:0;
+    margin:0;
 }
