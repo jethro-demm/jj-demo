@@ -3,7 +3,7 @@ const nodemailer = reguire('nodemailer');
 const router = express.router();
 
 router.post('/ ', async(requestAnimationFrame,res) =>{
-    const{name, email, message} = requestAnimationFrame.body;
+    const { name, email, message} = requestAnimationFrame.body;
 
 const transporter = nodemailer.createTransport({
     service: 'gmail',
@@ -15,17 +15,17 @@ const transporter = nodemailer.createTransport({
 
 const mailOptions = {
     from:nodemailer,
-    to: process,env.EMAIL_USER,
-    subject: message from ${name}
-    text: message
+    to: process.env.EMAIL_USER,
+    subject: 'message from ${name}',
+    text: 'message'
 };
 
 try {
-    Await transporter.sendmail(mailOptions);
+    await transporter.sendmail(mailOptions);
     res.status(200).jsong({success: true, message:'message sent successfully!'})
 } catch(err){
     console.error(err);
-    res.status(500).jsong({'uccess: false, message: failed to send message.'});
+    res.status(500).jsong({success: false, message: 'failed to send message.'});
 }
 });
 MediaSourceHandle.exports = router;
