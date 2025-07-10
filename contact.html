@@ -1,0 +1,73 @@
+,<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact u- patmost Divine Foundation Minitry</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <header>
+        <img src="logo1.jpg" alt="patmost logo" class="logo" width="100">
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html"> Home </a></li>
+                <li><a href="about.html"> Aboutus </a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+        </nav>
+    </header>
+    <maim class="content">
+    <h1>contact us</h1>
+    <p>We will love to hear from you! whether you are intereted in sponsoring a child, visiting the orphanage, or supporting our mission-reach to us below</p>
+    
+    <h2> send a message</h2>
+    <form action="https://formspree.io/f/your_form Id" method="post">
+    <label for="name">Name:</label><br><br>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="email">email</label><br><br>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="message"> message:</label><br>
+    <textarea id= message name="message" rows="5" required></textarea><br><br>
+
+    <input type="submit" value="send message" class="btn">
+
+    <h2> visit or call us</h2>
+    <p> <strong>location:</strong>Ntui_ville, yaounde cameroon</p>
+      <p> <strong>phone:</strong>651737702</p>
+        <p> <strong>email:</strong>patmostfoundation@gmail.com</p>
+    </main>
+    <script>
+        document.getElementById("contact form") .addEventListener("submit", async function (e) {
+            e.preventDefault();
+
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const message =document.getElementById("message").value;
+            
+const res = await fetch("http://localhost:5000/api/contact",) {
+method = "post",
+Headers: {
+    "content-type": "application/json"
+},
+body: json.stringify({name, email, message})
+ });
+
+ const data = await res.json();
+ alert(data.message);
+});
+    </script>
+
+    <footer>
+         <p>&copy;2025 patmost Divine foundation ministry.All rights reservedss</p>
+    </footer>
+
+
+    
+    
+</body>
+</html>
